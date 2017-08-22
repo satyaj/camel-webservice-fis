@@ -2,7 +2,9 @@ apiVersion: v1
 kind: Route
 spec:
   port:
-    targetPort: 8181
+    targetPort: default
+  tls:
+    termination: edge
   to:
     kind: Service
     name: fis-camel-webservice
